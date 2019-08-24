@@ -4,7 +4,7 @@
 int selection(int a[],int k,int n)
 {
 	int i,j,min,temp;
-	for(i=0;i<=k;i++)
+	for(i=0;i<k;i++)
 	{
 		min=i;
 		for(j=i+1;j<n-1;j++)
