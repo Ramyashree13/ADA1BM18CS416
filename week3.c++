@@ -1,3 +1,6 @@
+
+/* quick sort */
+
 # include<stdio.h>
 #include<conio.h>
 void quicksort(int a[],int ,int);
@@ -51,4 +54,57 @@ void quichsort(int a[],int low,int high)
 		quicksort(a,low,j-1);
 		quicksort(a,j+1,high);
 	}
+}
+
+
+
+/* Merge sort */
+
+#include<stdio.h>
+#include<conio.h>
+void mergesort(int [],int,int);
+void merge(int [],int,int,int);
+void main()
+{
+	int a[20],size,i;
+	printf("enter the size of array\n");
+	scanf("%d",&a);
+	printf("enter the array elements\n");
+	for(i=0;i<size;i++)
+		scanf("%d",a[i]);
+	mergesort(a,0,size-1);
+	printf("after sorting array elements are\n");
+	for(i=0;i<size;i++)
+		printf("%d\t",a[i]);
+}
+void mergesort(int a[],int low,int high)
+{
+	int mid,i;
+	if(low<high)
+	{
+		mid=(low+high)/2;
+		mergesort(a,low,mid);
+		mergesort(a,mid+1,high);
+		merge(a,low,mid,high);
+	}
+}
+void merge(int a[],int low,int mid,int high)
+{
+	int i,j,k,c[50];
+	k=i=low;
+	j=mid+1;
+	while(i<=mid && j<=high)
+	{
+		if(a[i]<a[j])
+			c[k++]=a[i++];
+		else
+			c[k++]=a[j++];
+	}
+	while(i<=mid)
+		c[k++]=a[i++];
+	while(j<=high)
+		c[k++]=a[j++];
+	for(i=low;i<=high;i++)
+		a[i]=c[i];
+	
 }
