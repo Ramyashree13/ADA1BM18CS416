@@ -1,15 +1,14 @@
 
 /*selection sort*/
-#include <stdio.h>
-
-
+#include<iostream>
+using namespace std;
 int selection(int a[],int k,int n)
 {
-	int i,j,min,temp;
+	int i,j,min,temp,count=0;
 	for(i=0;i<k;i++)
 	{
 		min=i;
-		for(j=i+1;j<n-1;j++)
+		for(j=i+1;j<=n-1;j++)
 		{
 			if(a[j]<a[min])
 			{
@@ -21,24 +20,22 @@ int selection(int a[],int k,int n)
 		a[i]=a[min];
 		a[min]=temp;
 	}
-	printf("%d",count);
+	cout<<"the count is = "<<count;
 	return a[k-1];
 }
 int main(int argc, char **argv)
 {
 		int n,i,k,res,a[10];
-		printf("enter the n \n");
-		scanf("%d",&n);
-		printf("enter the array elements\n");
+		cout<<"enter the n"<<endl;
+		cin>>n;
+		cout<<"enter the array elements"<<endl;
 		for(i=0;i<n;i++)
-			scanf("%d",&a[i]);
-		printf("enter the kth element\n");
-		scanf("%d",&k);
+			std::cin>>a[i];
+		cout<<"enter the kth element"<<endl;
+		cin>>k;
 		res=selection(a,k,n);
-		printf("the kth smallest element is %d\n",res);
+		cout<<"the kth smallest element is = "<<res;
 }
-
-
 
 /*BUBBLE SORT*/
 
