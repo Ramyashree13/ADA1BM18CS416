@@ -1,23 +1,8 @@
 
 /* quick sort */
 
-# include<stdio.h>
-#include<conio.h>
-void quicksort(int a[],int ,int);
-int partition(int a[],int low,int high);
-void main()
-{
-	int i,a[10],,low,size,high;
-	printf("enter the size\n");
-	scanf("%d",&size);
-	printf("enter the array elements\n");
-	for(i=0;i<size;i++)
-		scanf("%d",a[i]);
-	quicksort(array,0,size-1);
-	printf("After sorting array elements are\n");
-	for(i=0;i<size;i++)
-		printf("%d"\t,a[i]);
-}
+# include<iostream>
+
 int partition(int a[],int low,int high)
 {
 	int i,j,temp,key;
@@ -45,7 +30,7 @@ int partition(int a[],int low,int high)
 		}
 	}
 }
-void quichsort(int a[],int low,int high)
+void quicksort(int a[],int low,int high)
 {
 	int j;
 	if(low<high)
@@ -55,7 +40,24 @@ void quichsort(int a[],int low,int high)
 		quicksort(a,j+1,high);
 	}
 }
-
+int main()
+{
+	int i,a[10],low,size,high;
+	printf("enter the size\n");
+	scanf("%d",&size);
+	printf("size=%d\n",size);
+	printf("enter the array elements\n");
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&a[i]);
+		printf("%d",a[i]);
+		
+	}
+	quicksort(a,0,size-1);
+	printf("After sorting array elements are\n");
+	for(i=0;i<size;i++)
+		printf("%d\t",a[i]);
+}
 
 
 /* Merge sort */
