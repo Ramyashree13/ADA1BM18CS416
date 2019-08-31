@@ -2,7 +2,7 @@
 /* quick sort */
 
 # include<iostream>
-
+using namespace std;
 int partition(int a[],int low,int high)
 {
 	int i,j,temp,key;
@@ -11,7 +11,7 @@ int partition(int a[],int low,int high)
 	j=high;
 	while(1)
 	{
-		while(i<high && key>=a[i])
+		while(a[i]<high && key>=a[i])
 			i++;
 		while(key<a[i])
 			j--;
@@ -40,23 +40,21 @@ void quicksort(int a[],int low,int high)
 		quicksort(a,j+1,high);
 	}
 }
-int main()
+int  main()
 {
-	int i,a[10],low,size,high;
-	printf("enter the size\n");
-	scanf("%d",&size);
-	printf("size=%d\n",size);
-	printf("enter the array elements\n");
+	int i,a[10],size;
+	cout<<"enter the size of array";
+	cin>>size;
+	cout<<size;
+	cout<<"enter the array elements\n";
 	for(i=0;i<size;i++)
 	{
-		scanf("%d",&a[i]);
-		printf("%d",a[i]);
-		
+		cin>>a[i];
 	}
 	quicksort(a,0,size-1);
-	printf("After sorting array elements are\n");
+	cout<<"after sorting array elements are\n";
 	for(i=0;i<size;i++)
-		printf("%d\t",a[i]);
+		cout<<a[i];
 }
 
 
