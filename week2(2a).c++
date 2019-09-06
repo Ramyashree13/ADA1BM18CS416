@@ -4,7 +4,7 @@
 using namespace std;
 int selection(int a[],int k,int n)
 {
-	int i,j,min,temp;
+	int i,j,min,temp, count=0;
 	for(i=0;i<k;i++)
 	{
 		min=i;
@@ -20,6 +20,7 @@ int selection(int a[],int k,int n)
 		a[i]=a[min];
 		a[min]=temp;
 	}
+        court<<count;
 	return a[k-1];
 }
 int main(int argc, char **argv)
@@ -42,7 +43,7 @@ int main(int argc, char **argv)
 using namespace std;
 int bubble(int a[],int k,int n)
 {
-	int i,j,temp;
+	int i,j,temp, count=0;
 	for(i=0;i<k;i++)
 	{
 		for(j=0;j<n-1;j++)
@@ -59,6 +60,7 @@ int bubble(int a[],int k,int n)
 		}
 				
 	}
+        count<<count;
 	return a[n-k]; 
 }
 int main(int argc, char **argv)
