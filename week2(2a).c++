@@ -20,7 +20,7 @@ int selection(int a[],int k,int n)
 		a[i]=a[min];
 		a[min]=temp;
 	}
-        court<<count;
+        cout<<count;
 	return a[k-1];
 }
 int main(int argc, char **argv)
@@ -60,7 +60,7 @@ int bubble(int a[],int k,int n)
 		}
 				
 	}
-        count<<count;
+        cout<<count;
 	return a[n-k]; 
 }
 int main(int argc, char **argv)
