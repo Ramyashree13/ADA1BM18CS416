@@ -1,0 +1,15 @@
+ItemHierarchy
+
+ERROR {('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'sapadapterlogin'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'sapadapterlogin'. (18456)")}
+
+ItemPrice
+ERROR {Primary key is required.}
+
+ItemREtailArticle
+ ERROR {'errorMessage'}
+
+store
+ERROR {'storenumber'}
+
+to check the properties of cps
+http://md1npdvjdapc01.dev.corp.local:9811/cps/api/v1/application/SapAdapter/properties?environment=Development&categories=jms
